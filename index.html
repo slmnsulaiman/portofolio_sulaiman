@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portofolio Sulaiman</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Smooth scroll for navigation */
+        }
+        /* Custom styles for better aesthetics */
+        .section-title {
+            position: relative;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px; /* Width of the underline */
+            height: 4px;
+            background-color: #3B82F6; /* Tailwind blue color */
+            border-radius: 9999px; /* Rounded corners for the line */
+        }
+        .project-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border: 1px solid #E5E7EB; /* Subtle border for cards */
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+        }
+        .nav-link {
+            transition: color 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #BFDBFE; /* light blue on hover */
+        }
+        .skill-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .skill-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5rem;
+            flex-shrink: 0; /* Prevent icon from shrinking */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 bg-blue-600 p-4 shadow-lg z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#hero" class="text-white text-2xl font-bold">Sulaiman</a>
+            <div class="space-x-6">
+                <a href="#tentang" class="text-white nav-link">Tentang</a>
+                <a href="#pendidikan" class="text-white nav-link">Pendidikan</a>
+                <a href="#pengalaman" class="text-white nav-link">Pengalaman</a>
+                <a href="#proyek" class="text-white nav-link">Proyek</a>
+                <a href="#skills" class="text-white nav-link">Skills</a> <!-- Added Skills to Navbar -->
+                <a href="#kontak" class="text-white nav-link">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 md:py-32 text-center relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <!-- Placeholder for profile picture -->
+            <img src="assets/lai.jpg" alt="Foto Profil Sulaiman" class="rounded-full w-32 h-32 mx-auto mb-6 border-4 border-white shadow-lg">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-2">Sulaiman</h1>
+            <p class="text-xl md:text-2xl font-light mb-8">Mobile & Web Developer | Fullstack Enthusiast</p>
+            <p class="max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
+                Sebagai seorang <span class="font-semibold">Fullstack Mobile Developer</span> yang bersemangat, saya berfokus pada pembangunan solusi digital inovatif dan efisien. Dengan keahlian di <span class="font-semibold">Flutter</span>, <span class="font-semibold">Node.js</span>, <span class="font-semibold">MongoDB</span>, dan <span class="font-semibold">Firebase</span>, saya juga sedang memperdalam pengetahuan di bidang <span class="font-semibold">backend</span> dan <span class="font-semibold">cloud computing</span>. Saya berkomitmen untuk menciptakan aplikasi yang tidak hanya fungsional, tetapi juga memberikan pengalaman pengguna yang luar biasa, termasuk pengembangan web untuk panel admin.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tentang Saya Section -->
+    <section id="tentang" class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 section-title">Tentang Saya</h2>
+        <p class="text-lg leading-relaxed text-gray-700">
+            Sebagai seorang mahasiswa Sistem Informasi di Universitas Islam Kalimantan Muhammad Arsyad Al-Banjari, saya memiliki minat yang kuat dalam pengembangan perangkat lunak. Saya terus belajar dan beradaptasi dengan teknologi terbaru untuk menciptakan aplikasi yang relevan dan berdampak. Saya percaya pada kekuatan kolaborasi dan selalu mencari tantangan baru untuk mengasah kemampuan teknis dan pemecahan masalah.
+        </p>
+    </section>
+
+    <!-- Pendidikan Section -->
+    <section id="pendidikan" class="bg-gray-100 container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 section-title">Pendidikan</h2>
+        <div class="space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Sistem Informasi</h3>
+                <p class="text-gray-600">Universitas Islam Kalimantan Muhammad Arsyad Al-Banjari</p>
+                <p class="text-sm text-gray-500">2021 – Sekarang</p>
+                <p class="mt-2 text-gray-700">Fokus pada pengembangan perangkat lunak, manajemen basis data, dan analisis sistem.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Section -->
+    <section id="pengalaman" class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 section-title">Pengalaman</h2>
+        <div class="space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Kampus Merdeka</h3>
+                <p class="text-gray-600">
+                    <span class="font-medium">Pertukaran Mahasiswa Merdeka Angkatan 3</span> • Universitas Malikussaleh, Aceh • 2023<br>
+                    <span class="font-medium">Magang & Studi Independen Bersertifikat (MSIB) Batch 5</span> • Posisi: Mobile Application Developer (Flutter) • Learnix • 2024
+                </p>
+                <p class="mt-2 text-gray-700">
+                    Mengikuti perkuliahan lintas kampus, mendalami budaya lokal, dan berpartisipasi dalam proyek kolaboratif. Serta berpartisipasi dalam pengembangan aplikasi mobile menggunakan Flutter, menerapkan praktik terbaik dalam pengembangan perangkat lunak.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Magang</h3>
+                <p class="text-gray-600">PT Diyatama Metro Sejati (Qmall Banjarbaru)</p>
+                <p class="mt-2 text-gray-700">Mendapatkan pengalaman langsung dalam lingkungan kerja profesional, berkontribusi pada proyek-proyek riil.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Part-time: Penjaga Stand Minuman</h3>
+                <p class="text-gray-600">Miltie Buble, Banjarmasin• 2021</p>
+                <p class="mt-2 text-gray-700">Bertanggung jawab melayani pelanggan, mengelola stok inventaris, dan mencatat transaksi penjualan harian.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Penghargaan & Sertifikasi Section -->
+    <section id="sertifikasi" class="bg-gray-100 container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 section-title">Penghargaan & Sertifikasi</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Juara 3 UI/UX Festika</h3>
+                <p class="text-gray-600">Diselenggarakan oleh ITB STIKOM BALI</p>
+            </div>
+             <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Magang dan Studi Independen Bersertifikat</h3>
+                <p class="text-gray-600">Learnix</p>
+            </div>
+             <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Pertukaran Mahasiswa Merdeka </h3>
+                <p class="text-gray-600">Universitas Malikussaleh</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Membuat Aplikasi Android untuk Pemula</h3>
+                <p class="text-gray-600">Dicoding Indonesia</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Pemrograman dengan Kotlin</h3>
+                <p class="text-gray-600">Dicoding Indonesia</p>
+            </div>
+           
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Analisis Data dengan Python</h3>
+                <p class="text-gray-600">Dicoding Indonesia</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Memulai Pemrograman dengan Python</h3>
+                <p class="text-gray-600">Dicoding Indonesia</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Dasar Structured Query Language (SQL)</h3>
+                <p class="text-gray-600">Dicoding Indonesia</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Dasar Visualisasi Data</h3>
+                <p class="text-gray-600">Dicoding Indonesia</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700">Dasar AI</h3>
+                <p class="text-gray-600">Dicoding Indonesia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyek Section -->
+   <section id="proyek" class="container mx-auto px-4 py-16">
+  <h2 class="text-3xl font-bold text-gray-900 section-title">Proyek</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <!-- Proyek 1 -->
+    <a href="https://github.com/slmnsulaiman/manajemen_karyawan.git" target="_blank" class="block hover:scale-[1.02] transition-transform">
+      <div class="project-card bg-white p-6 rounded-lg shadow-md">
+        <img src="assets/manajemen-karyawan.jpeg" alt="Aplikasi Manajemen Karyawan" class="w-full h-48 object-contain p-2 rounded-md mb-4 bg-gray-50">
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">Manajemen Karyawan</h3>
+        <p class="text-gray-700 text-sm">
+          Aplikasi mobile untuk manajemen karyawan menggunakan <span class="font-medium">Flutter</span>, <span class="font-medium">State Management GetX</span>, dan <span class="font-medium">Firebase</span>. Fitur meliputi presensi, cuti, lembur, inventaris, dan laporan PDF.
+        </p>
+      </div>
+    </a>
+
+    <!-- Proyek 2 -->
+    <a href="https://github.com/slmnsulaiman/coffe_shop_paymentgateway_pushnotif.git" target="_blank" class="block hover:scale-[1.02] transition-transform">
+      <div class="project-card bg-white p-6 rounded-lg shadow-md">
+        <img src="assets/copi.jpeg" alt="Aplikasi Pembayaran Coffee Shop" class="w-full h-48 object-contain p-2 rounded-md mb-4 bg-gray-50">
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">Coffee Shop Payment Gateway</h3>
+        <p class="text-gray-700 text-sm">
+          Sistem pembayaran terintegrasi untuk kedai kopi. Dibangun dengan <span class="font-medium">Flutter</span> (mobile app), <span class="font-medium">MongoDB</span>, <span class="font-medium">Node.js</span>, dan <span class="font-medium">Firebase Cloud Messaging (FCM)</span>. Integrasi <span class="font-medium">Midtrans</span> untuk pembayaran.
+        </p>
+      </div>
+    </a>
+
+    <!-- Proyek 3 -->
+    <a href="https://github.com/slmnsulaiman/food_delivery_umkm.git" target="_blank" class="block hover:scale-[1.02] transition-transform">
+      <div class="project-card bg-white p-6 rounded-lg shadow-md">
+        <img src="assets/food.jpeg" alt="Aplikasi Pengiriman Makanan" class="w-full h-48 object-contain p-2 rounded-md mb-4 bg-gray-50">
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">Food Delivery App</h3>
+        <p class="text-gray-700 text-sm">
+          Aplikasi pengiriman makanan dengan fitur real-time. Menggunakan <span class="font-medium">Flutter</span>, <span class="font-medium">GetX</span>, <span class="font-medium">MongoDB</span>, <span class="font-medium">Node.js</span>, dan <span class="font-medium">Firebase Realtime Database</span>.
+        </p>
+      </div>
+    </a>
+
+    <!-- Proyek 4 -->
+    <a href="https://github.com/username/web-learning" target="_blank" class="block hover:scale-[1.02] transition-transform">
+      <div class="project-card bg-white p-6 rounded-lg shadow-md">
+        <img src="assets/manajemen-karyawan.jpeg" alt="Aplikasi Pembelajaran Web" class="w-full h-48 object-contain p-2 rounded-md mb-4 bg-gray-50">
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">Web Learning/Course (Sedang Dikembangkan)</h3>
+        <p class="text-gray-700 text-sm">
+          Platform pembelajaran berbasis web yang sedang dalam tahap pengembangan. Bertujuan untuk menyediakan materi kursus interaktif dan pengalaman belajar yang menarik.
+        </p>
+      </div>
+    </a>
+
+      <!-- Proyek 5 -->
+    <a href="https://www.figma.com/proto/DSJ2VT3yAj96vTOiawmysB/GreenX?node-id=39-2&p=f&t=BUNh41W57ZC2seZc-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=283%3A3349" target="_blank" class="block hover:scale-[1.02] transition-transform">
+      <div class="project-card bg-white p-6 rounded-lg shadow-md">
+        <img src="assets/greenx.png" alt="Aplikasi Pembelajaran Web" class="w-full h-48 object-contain p-2 rounded-md mb-4 bg-gray-50">
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">UI UX GreenX</h3>
+        <p class="text-gray-700 text-sm">
+            Desain antarmuka aplikasi GreenX, sebuah platform pengelolaan lingkungan digital. Fokus pada pengalaman pengguna dalam memantau aktivitas hijau, kampanye, dan kontribusi terhadap pelestarian lingkungan.
+        </p>
+      </div>
+    </a>
+
+       <!-- Proyek 6 -->
+    <a href="https://www.figma.com/proto/aYZtU8BFJMgkH3I7waBV0c/Course?t=oCoFc31ErwXO4d6w-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=11-5286&starting-point-node-id=4%3A10" target="_blank" class="block hover:scale-[1.02] transition-transform">
+      <div class="project-card bg-white p-6 rounded-lg shadow-md">
+        <img src="assets/course.png" alt="Aplikasi Pembelajaran Web" class="w-full h-48 object-contain p-2 rounded-md mb-4 bg-gray-50">
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">UI UX Course APP</h3>
+        <p class="text-gray-700 text-sm">
+          Rancangan UI/UX untuk Course App, aplikasi edukasi berbasis mobile yang menawarkan fitur kursus online. Fokus pada pengalaman pengguna dalam memantau materi, kelas, dan interaksi dengan instruktur.
+        </p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-gray-100 container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 section-title">Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Mobile Development</h3>
+                <ul class="list-none text-gray-700 space-y-1">
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a2 2 0 002-2V8a2 2 0 00-2-2H7a2 2 0 00-2 2v8a2 2 0 002 2h10z"></path><path d="M12 22v-4"></path><path d="M9 22h6"></path></svg>
+                        Flutter
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"></path></svg>
+                        Dart
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        GetX State Management
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Backend Development</h3>
+                <ul class="list-none text-gray-700 space-y-1">
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 10H10V6.5L13.5 10ZM20 4H4C2.9 4 2 4.9 2 6V20C2 21.1 2.9 22 4 22H20C21.1 22 22 21.1 22 20V6C22 4.9 21.1 4 20 4ZM10 16H8V14H10V16ZM10 12H8V10H10V12ZM14 16H12V14H14V16ZM14 12H12V10H14V12ZM18 16H16V14H18V16ZM18 12H16V10H18V12Z"></path></svg>
+                        Node.js
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                        Express.js
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path></svg>
+                        RESTful APIs
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm-1-10h2v6h-2zm0-2h2v2h-2z"></path></svg>
+                        Firebase (Authentication, Firestore, Realtime Database, FCM)
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path></svg>
+                        MongoDB
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path></svg>
+                        SQL (Dasar)
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Web Development (Admin Panel)</h3>
+                <ul class="list-none text-gray-700 space-y-1">
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h20v16H2zM12 8v8M8 12h8"></path></svg>
+                        HTML, CSS, JavaScript
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path></svg>
+                        Tailwind CSS
+                    </li>
+                   
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Cloud & DevOps (Sedang Dipelajari)</h3>
+                <ul class="list-none text-gray-700 space-y-1">
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm-1-10h2v6h-2zm0-2h2v2h-2z"></path></svg>
+                        Firebase Hosting
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path></svg>
+                        Konsep Dasar Cloud Computing (AWS/GCP - Dasar)
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path></svg>
+                        Deployment Aplikasi
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Tools & Lain-lain</h3>
+                <ul class="list-none text-gray-700 space-y-1">
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path></svg>
+                        Git & GitHub
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path></svg>
+                        Postman
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path></svg>
+                        VS Code
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path></svg>
+                        UI/UX Design (Figma)
+                    </li>
+                    <li class="skill-item">
+                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path></svg>
+                        Problem Solving
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="bg-gray-100 container mx-auto px-4 py-16 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 section-title mx-auto w-fit">Kontak</h2>
+        <p class="text-lg text-gray-700 mb-8">Jangan ragu untuk menghubungi saya!</p>
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+            <a href="mailto:sulaimanlaisul@gmail.com" class="flex items-center text-blue-600 hover:text-blue-800 transition duration-200">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                sulaimanlaisul@gmail.com.com
+            </a>
+            <a href="https://wa.me/6281349175296" target="_blank" class="flex items-center text-blue-600 hover:text-blue-800 transition duration-200">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.336-3.111A8.85 8.85 0 012 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-7 4a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd"></path></svg>
+                +62 813-49175296
+            </a>
+            <a href="https://www.linkedin.com/in/sulaiman-dev-example" target="_blank" class="flex items-center text-blue-600 hover:text-blue-800 transition duration-200">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.3 0H3.7C1.65 0 0 1.65 0 3.7v12.6C0 18.35 1.65 20 3.7 20h12.6c2.05 0 3.7-1.65 3.7-3.7V3.7C20 1.65 18.35 0 16.3 0zM6 17H3V7h3v10zM4.5 5.25A2.25 2.25 0 116.75 3 2.25 2.25 0 014.5 5.25zM17 17h-3v-5.5c0-1.38-.62-2-1.5-2-.88 0-1.5.62-1.5 2V17h-3V7h3v1c.5-.62 1.25-1 2.25-1 2.5 0 3.25 1.75 3.25 4.5V17z" clip-rule="evenodd"></path></svg>
+                LinkedIn/sulaiman-dev-example
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 text-center text-sm">
+        <p>&copy; 2025 Sulaiman. Dibuat dengan ❤️ dan semangat belajar.</p>
+    </footer>
+</body>
+</html>
